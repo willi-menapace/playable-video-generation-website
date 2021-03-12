@@ -23,12 +23,13 @@
   <script src="./resources/onnx.min.js"></script>
   <script src="./resources/ndarray-browser-min.js"></script>
   <script src="./resources/image-loader.js"></script>
-  <script src="./resources/states.js"></script>
-  <script src="./resources/index.js"></script>
+  <script src="./resources/states-bair.js"></script>
+  <script src="./resources/index-stacking.js"></script>
   <script>
-    const W = 160;
-    const H = 208;
-    const n_act = 3;
+    const W = 256;
+    const H = 256;
+    const n_act = 7;
+    const stacking = 1;
   </script>
 
 </head>
@@ -46,19 +47,22 @@
   </section>  
 
   <div class="container pt-5">
-      <h2>Atari Breakout, Learned with CADDY</h2>
+      <h2>BAIR, Learned with CADDY</h2>
       <h2 id='load'>Loading models...</h2>
-      <p class="lead">Live demo of CADDY trained on Atari Breakout. Starting from an initial frame, our model receives an action input at each step and predicts the successive frame. Use the buttons at the bottom of the figure to specify the current action input, the 'reset' button to restart from the beggining and the 'new' button to start from a different frame.</p>
+      <p class="lead">Live demo of CADDY trained on BAIR. Starting from an initial frame, our model receives an action input at each step and predicts the successive frame. Use the buttons at the bottom of the figure to specify the current action input, the 'reset' button to restart from the beggining and the 'new' button to start from a different frame.</p>
 
       <div class="row pt-3">
         <div class="col-sm-12 text-center">
            <button class="button btn btn-primary" onclick="reset_random()">New</button>
 	         <button class="button btn btn-primary" onclick="reset()">Reset</button>
 
-          <div class='item-canvas py-2'><canvas id="screen" width=320 height=416/></div>
-          <button class='button btn btn-primary' onclick="run(1)">Left</button>
-          <button class='button btn btn-primary' onclick="run(0)">Stay</button>
-          <button class='button btn btn-primary' onclick="run(2)">Right</button>
+          <div class='item-canvas py-2'><canvas id="screen" width=512 height=512/></div>
+          <button class='button btn btn-primary' onclick="run(0)">Left-Fast</button>
+          <button class='button btn btn-primary' onclick="run(6)">Left</button>
+          <button class='button btn btn-primary' onclick="run(4)">Right</button>
+          <button class='button btn btn-primary' onclick="run(1)">Up</button>
+          <button class='button btn btn-primary' onclick="run(2)">Down</button>
+          <button class='button btn btn-primary' onclick="run(5)">Lift</button>
         </div>
       </div>
 
