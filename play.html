@@ -20,17 +20,7 @@
 
   <title>Playable Video Generation</title>
 
-  <script src="./resources/onnx.min.js"></script>
-  <script src="./resources/ndarray-browser-min.js"></script>
-  <script src="./resources/image-loader.js"></script>
-  <script src="./resources/states.js"></script>
-  <script src="./resources/index.js"></script>
-  <script>
-    const W = 160;
-    const H = 208;
-    const n_act = 3;
-  </script>
-
+  
 </head>
 <body onload="init();">
 
@@ -64,5 +54,16 @@
 
       <p class="lead pt-4">To guarantee better compatibility across devices, this demo runs on CPU, while our complete model runs in GPU in real time. Moreover, running in browser required minor modifications to the model which may cause losses in performance.</p>
   </div>
+
+  <script src="./resources/onnx.min.js"></script>
+  <script src="./resources/ndarray-browser-min.js"></script>
+  <script src="./resources/image-loader.js"></script>
+  <script src="./resources/states.js"></script>
+  <script src="./resources/index.js"></script>
+  <script>
+    const W = 160;
+    const H = 208;
+    const n_act = 3;
+  </script>
 </body>
 </html>

@@ -20,18 +20,6 @@
 
   <title>Playable Video Generation</title>
 
-  <script src="./resources/onnx.min.js"></script>
-  <script src="./resources/ndarray-browser-min.js"></script>
-  <script src="./resources/image-loader.js"></script>
-  <script src="./resources/states-bair.js"></script>
-  <script src="./resources/index-stacking.js"></script>
-  <script>
-    const W = 256;
-    const H = 256;
-    const n_act = 7;
-    const stacking = 1;
-  </script>
-
 </head>
 <body onload="init();">
 
@@ -68,5 +56,18 @@
 
       <p class="lead pt-4">To guarantee better compatibility across devices, this demo runs on CPU, while our complete model runs in GPU in real time. Moreover, running in browser required minor modifications to the model which may cause losses in performance.</p>
   </div>
+
+  <script src="./resources/onnx.min.js"></script>
+  <script src="./resources/ndarray-browser-min.js"></script>
+  <script src="./resources/image-loader.js"></script>
+  <script src="https://storage.googleapis.com/user-study/interactive-video-synthesis/models/states-bair.js"></script>
+  <script src="./resources/index-stacking.js"></script>
+  <script>
+    const W = 256;
+    const H = 256;
+    const n_act = 7;
+    const stacking = 1;
+  </script>
+  
 </body>
 </html>
